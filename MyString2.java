@@ -24,7 +24,7 @@ public final class MyString2 {
             currObjTotal += Character.toLowerCase(chars[i]);
             sTotal += Character.toLowerCase(s.charAt(i));
         }
-        return currObjTotal - sTotal;
+        return (currObjTotal - sTotal < 0) ? -1 : 1;
     }
 
     public MyString2 substring(int begin) {
@@ -66,6 +66,7 @@ class mymain{
         MyString2 b = myst.substring(5);
         MyString2 c = myst.toUpperCase();
         System.out.println("sub: " + b.s + "\n"+
-                "up: " + c.s + "\nDeterministic VS Undeterministic: " + myst.compare("retErmiNistic"));
+                "up: " + c.s + "\nDeterministic VS Undeterministic: " + myst.compare("undetermiNistic"));
+        System.out.println(myst.toChars());
     }
 }
